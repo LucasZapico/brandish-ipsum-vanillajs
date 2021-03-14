@@ -1,13 +1,16 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  target: 'node', // in order to ignore built-in modules like path, fs, etc.
-  externals: [nodeExternals()],
-  entry: ['@babel/polyfill', './index.js'],
+  mode: 'none',
+  entry: './src/index.js',
   output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: false,
+    port: 9000,
   },
   module: {
     rules: [
@@ -21,6 +24,17 @@ module.exports = {
             plugins: ['@babel/plugin-transform-async-to-generator'],
           },
         },
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
       },
     ],
   },
