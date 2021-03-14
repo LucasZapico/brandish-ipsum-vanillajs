@@ -4,7 +4,11 @@
   "description": "A vinillajs frontend for BrandishIpsum",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "webpack serve --mode development",
+    "watch": "webpack --watch",
+    "build:dev": "webpack --mode development ",
+    "clean": "rm -rf ./dist"
   },
   "keywords": [
     "ipsum"
@@ -15,10 +19,19 @@
     "@babel/core": "^7.13.8",
     "@babel/node": "^7.13.0",
     "@babel/preset-env": "^7.13.9",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.1.2",
     "eslint": "^7.21.0",
     "eslint-config-google": "^0.14.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
     "webpack": "^5.24.3",
     "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
     "webpack-node-externals": "^2.5.2"
+  },
+  "dependencies": {
+    "uikit": "^3.6.17"
   }
 }
