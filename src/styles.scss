@@ -1,0 +1,19 @@
+.skeleton {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	background-color: #756f66;
+	width: auto;
+	height: 20px;
+	animation: 2s ease-in-out infinite alternate loading;
+}
+
+@keyframes loading {
+	from {
+		background: rgb(171, 166, 161);
+		background: #e0e0e0;
+	}
+	to {
+		background: rgb(231, 222, 213);
+		background: #c4c4c4;
+	}
+}
