@@ -8,7 +8,7 @@
     "start:dev": "webpack serve --mode development",
     "watch": "webpack --watch",
     "build:dev": "webpack --mode development ",
-    "clean": "rm -rf ./dist",
+    "clean": "rm -rf ./build",
     "build": "webpack"
   },
   "keywords": [
@@ -24,6 +24,7 @@
     "css-loader": "^5.1.2",
     "eslint": "^7.21.0",
     "eslint-config-google": "^0.14.0",
+    "html-webpack-plugin": "^5.3.1",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
