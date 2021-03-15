@@ -20,7 +20,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'public/index.html',
     }),
-    new webpack.EnvironmentPlugin(['API_BASE_URL']),
   ],
   module: {
     rules: [

@@ -5,7 +5,7 @@ import './styles.scss';
 // loads the Icon plugin
 UIkit.use(Icons);
 
-console.log('api url', process.env.API_URL);
+console.log('api url', process.env.API_BASE_URL);
 
 const urlInput = document.getElementById('url');
 const ipsum = document.getElementById('ipsum');
@@ -54,7 +54,7 @@ form.addEventListener('submit', (e) => {
         paraSize = i.id;
       }
     });
-    const url = `${process.env.API_URL}/make-ipsum/?url=${urlInput.value}&number-para=${e.target.paragraphs.value}&para-size=${paraSize}`;
+    const url = `${process.env.API_BASE_URL}/make-ipsum/?url=${urlInput.value}&number-para=${e.target.paragraphs.value}&para-size=${paraSize}`;
     // const url = `http://127.0.0.1:5000/get-ipsum/`;
     fetch(url, {
       method: 'GET',
