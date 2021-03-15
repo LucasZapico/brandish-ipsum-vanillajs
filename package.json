@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "webpack serve --mode development",
-    "watch": "webpack --watch",
+    "watch": "webpack --watch --mode development",
     "build:dev": "webpack --mode development ",
     "clean": "rm -rf ./build",
     "build": "webpack --mode production"
