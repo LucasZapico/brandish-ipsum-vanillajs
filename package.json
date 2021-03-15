@@ -9,7 +9,7 @@
     "watch": "webpack --watch",
     "build:dev": "webpack --mode development ",
     "clean": "rm -rf ./build",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "keywords": [
     "ipsum"
@@ -22,6 +22,7 @@
     "@babel/preset-env": "^7.13.9",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.1.2",
+    "dotenv-webpack": "^7.0.1",
     "eslint": "^7.21.0",
     "eslint-config-google": "^0.14.0",
     "html-webpack-plugin": "^5.3.1",
@@ -34,6 +35,7 @@
     "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
+    "node-env-webpack-plugin": "^1.1.0",
     "uikit": "^3.6.17"
   }
 }
