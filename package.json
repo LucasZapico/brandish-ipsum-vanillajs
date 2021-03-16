@@ -35,6 +35,8 @@
     "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.13.0",
+    "@babel/polyfill": "^7.12.1",
     "node-env-webpack-plugin": "^1.1.0",
     "uikit": "^3.6.17"
   }
